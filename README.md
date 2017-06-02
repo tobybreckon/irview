@@ -18,6 +18,14 @@ Keyboard commands
          c - toggle false colour (default: on)
          x - exit
 ```
+---
+
+_"In certain instances, it can be better to display intensity images using a false-colour map.
+One of the main motives behind the use of false-colour display rests on the fact that the
+human visual system is only sensitive to approximately 40 shades of grey in the range from
+black to white, whereas our sensitivity to colour is much finer. False colour can also serve to
+accentuate or delineate certain features or structures, making them easier to identify for the
+human observer."_ [[Solomon / Breckon, 2010](http://www.fundipbook.com)]
 
 Originally developed as a visualization and test tool to support the research in:
 
