@@ -2,7 +2,8 @@
 
 Requires [OpenCV 3.x](http://www.opencv.org).
 
---
+---
+
 ```
 IrView - (c) Toby Breckon, 2008-2017+
          with OpenCV version 3.1.0 (3.1.0)
@@ -17,7 +18,6 @@ Keyboard commands
          c - toggle false colour (default: on)
          x - exit
 ```
---
 
 Originally developed as a visualization and test tool to support the research in:
 
@@ -26,17 +26,19 @@ Originally developed as a visualization and test tool to support the research in
 
 Work carried out as part of the UK MoD Grand Challenge 2008 (autonomous systems for wide area search and surveillance).
 
---
+---
+
 Click for youtube video example (of thermal ducks):
+
 [![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)](http://www.youtube.com/watch?v=c9nF-k0u0Qk)
 
---
+---
 
 If you find any bugs report them to me (or better still submit a pull request, please) - toby.breckon@durham.ac.uk
 
 _"may the source be with you"_ - anon.
 
-## TODO
+### (still) TODO
 - variable colour maps
 - video file looping
 - additional auto contrast techniques
