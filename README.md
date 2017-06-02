@@ -25,16 +25,14 @@ One of the main motives behind the use of false-colour display rests on the fact
 human visual system is only sensitive to approximately 40 shades of grey in the range from
 black to white, whereas our sensitivity to colour is much finer. False colour can also serve to
 accentuate or delineate certain features or structures, making them easier to identify for the
-human observer."_
-
-[[Solomon / Breckon, 2010](http://www.fundipbook.com)]
+human observer."_  [[Solomon / Breckon, 2010](http://www.fundipbook.com)]
 
 Originally developed as a visualization and test tool to support the research in:
 
 [Multi-Modal Target Detection for Autonomous Wide Area Search and Surveillance](http://community.dur.ac.uk/toby.breckon/publications/papers/breckon13autonomous.pdf)
 (T.P. Breckon, A. Gaszczak, J. Han, M.L. Eichner, S.E. Barnes), In Proc. SPIE Emerging Technologies in Security and Defence: Unmanned Sensor Systems, SPIE, Volume 8899, No. 01, pp. 1-19, 2013. [[pdf](http://community.dur.ac.uk/toby.breckon/publications/papers/breckon13autonomous.pdf)] [[doi](http://dx.doi.org/10.1117/12.2028340)]
 
-Work carried out as part of the _UK MoD Grand Challenge 2008_ (autonomous systems for wide area search and surveillance).
+Work carried out as part of the _UK MoD Grand Challenge 2008_ (Stellar Team - autonomous systems for wide area search and surveillance).
 
 Used for the false colour visualization examples in:
 
