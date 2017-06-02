@@ -27,9 +27,9 @@ Originally developed as a visualization and test tool to support the research in
 Work carried out as part of the UK MoD Grand Challenge 2008 (autonomous systems for wide area search and surveillance).
 
 --
-<p align="center">
-[![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)](http://www.youtube.com/watch?v=c9nF-k0u0Qk)
-</p>
+
+[![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)] (http://www.youtube.com/watch?v=c9nF-k0u0Qk)
+
 --
 
 If you find any bugs report them to me (or better still submit a pull request, please) - toby.breckon@durham.ac.uk
