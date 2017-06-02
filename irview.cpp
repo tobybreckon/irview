@@ -122,13 +122,13 @@ int main( int argc, char** argv )
 	// if command line arguments are provided try to read image/video_name
 	// otherwise default to capture from attached H/W camera
 
-		if(
+	if(
 		( argc == 2 && (img = cvLoadImage( argv[1], 1)) != 0 ) ||
 		( argc == 2 && (capture = cvCreateFileCapture( argv[1] )) != 0 ) ||
 		( argc != 2 && (capture = cvCreateCameraCapture( CAMERA_INDEX )) != 0 )
 		)
-		{
-			// print help
+	{
+		// print help
 
 		print_help(argv);
 
@@ -169,14 +169,14 @@ int main( int argc, char** argv )
 
 		// set single channel up for Saturation / Variance
 
-		singleChannelPlain =
-					cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
+		singleChannelPlain = cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
 		singleChannelPlain->origin = img->origin;
 		cvSet(singleChannelPlain, cvScalar(255));
 
 		// start main loop
 
-		while (keepProcessing) {
+		while (keepProcessing)
+		{
 
 			// if capture object in use (i.e. video/camera)
 			// get image from capture object
@@ -302,10 +302,10 @@ int main( int argc, char** argv )
 		cvReleaseImage( &singleChannelH );
 		cvReleaseImage( &singleChannelPlain );
 
-			// all OK : main returns 0
+		// all OK : main returns 0
 
-			return 0;
-		}
+		return 0;
+	}
 
 		// not OK : main returns -1
 
