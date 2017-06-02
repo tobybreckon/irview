@@ -5,17 +5,19 @@ Requires [OpenCV 3.x](http://www.opencv.org).
 ---
 
 ```
-IrView - (c) Toby Breckon, 2008-2017+
+IrView v0.2- (c) Toby Breckon, 2008-2017+
          with OpenCV version 3.1.0 (3.1.0)
 GPL - http://www.gnu.org/licenses/gpl.html
 
 Usage :./irview [image/video file]
-Camera interface: run with no file agrument for direct camera use
+Camera interface: run with no file argument for direct camera use
 
 Keyboard commands
          a - automatic scaling (default: on)
          b - show both false colour and original (default: off)
          c - toggle false colour (default: on)
+         e - exit (as per x)
+         f - toggle false colour (default: on)
          x - exit
 ```
 ---
@@ -41,7 +43,7 @@ Used for the false colour visualization examples in:
 
 ---
 
-Click for youtube video example (of thermal ducks):
+Click for YouTube video example (of thermal ducks):
 
 [![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)](http://www.youtube.com/watch?v=c9nF-k0u0Qk)
 
