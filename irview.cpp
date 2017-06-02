@@ -1,5 +1,5 @@
 // irview : simple viewer for adding false colour to IR or thermal images
-//          / video / camera feed
+//					/ video / camera feed
 // usage: prog {image/video file}
 
 // Author : Toby Breckon, toby.breckon@durham.ac.uk
@@ -20,15 +20,15 @@
 
 #include <iostream>		// standard C++ I/O
 #include <string>		// standard C++ I/O
-#include <algorithm>    // includes max()
+#include <algorithm>		// includes max()
 
 using namespace cv; // OpenCV API is in the C++ "cv" namespace
 using namespace std;
 
 #else
 
-#include "cv.h"       // open cv general include file
-#include "highgui.h"  // open cv GUI include file
+#include "cv.h"			 // open cv general include file
+#include "highgui.h"	// open cv GUI include file
 
 #include <stdio.h>
 #include <ctype.h>
@@ -100,7 +100,7 @@ Mat concatImages(Mat img1, Mat img2)
 int main( int argc, char** argv )
 {
 
-	IplImage* img = NULL;      // image object
+	IplImage* img = NULL;			// image object
 	CvCapture* capture = NULL; // capture object
 
 	const char* windowNameHSV = PROG_ID_STRING; // window name
@@ -112,157 +112,155 @@ int main( int argc, char** argv )
 
 	bool keepProcessing = true;		// loop control flag
 	char key = '\0';				// user input
-	int  EVENT_LOOP_DELAY = 40;     // 40ms equates to 1000ms/25fps =
+	int	EVENT_LOOP_DELAY = 40;		 // 40ms equates to 1000ms/25fps =
 									// 40ms per frame
 
-	bool useFalseColour = true;     // process flag - false colour
-	bool useNormalisation = true;   // process flag - normalisation
+	bool useFalseColour = true;		 // process flag - false colour
+	bool useNormalisation = true;	 // process flag - normalisation
 	bool useConcatImage = false; 		// process flag - show concatenated images
 
-  // if command line arguments are provided try to read image/video_name
-  // otherwise default to capture from attached H/W camera
+	// if command line arguments are provided try to read image/video_name
+	// otherwise default to capture from attached H/W camera
 
-    if(
-	  ( argc == 2 && (img = cvLoadImage( argv[1], 1)) != 0 ) ||
-	  ( argc == 2 && (capture = cvCreateFileCapture( argv[1] )) != 0 ) ||
-	  ( argc != 2 && (capture = cvCreateCameraCapture( CAMERA_INDEX )) != 0 )
-	  )
-    {
-      // print help
+		if(
+		( argc == 2 && (img = cvLoadImage( argv[1], 1)) != 0 ) ||
+		( argc == 2 && (capture = cvCreateFileCapture( argv[1] )) != 0 ) ||
+		( argc != 2 && (capture = cvCreateCameraCapture( CAMERA_INDEX )) != 0 )
+		)
+		{
+			// print help
 
-	  print_help(argv);
+		print_help(argv);
 
-	  // create window object (use flag=0 to allow resize, 1 to auto fix size)
+		// create window object (use flag=0 to allow resize, 1 to auto fix size)
 
-	  cvNamedWindow(windowNameHSV, 0);
-	  cvResizeWindow(windowNameHSV, 640, 480);
+		cvNamedWindow(windowNameHSV, 0);
+		cvResizeWindow(windowNameHSV, 640, 480);
 
-	  // if capture object in use (i.e. video/camera)
-	  // get initial image from capture object
+		// if capture object in use (i.e. video/camera)
+		// get initial image from capture object
 
-	  if (capture) {
+		if (capture) {
 
-		  // cvQueryFrame s just a combination of cvGrabFrame
-		  // and cvRetrieveFrame in one call.
+			// cvQueryFrame s just a combination of cvGrabFrame
+			// and cvRetrieveFrame in one call.
 
-		  img = cvQueryFrame(capture);
-		  if(!img){
+			img = cvQueryFrame(capture);
+			if(!img){
 			if (argc == 2){
 				printf("End of video file reached\n");
 			} else {
 				printf("ERROR: cannot get next frame from camera\n");
 			}
 			exit(0);
-		  }
+			}
 
-	  }
+		}
 
-	  // setup output image in HSV
+		// setup output image in HSV
 
-	  HSV = cvCloneImage(img);
-	  singleChannelH =
-	  			cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
-	  singleChannelH->origin = img->origin;
-	  IplImage* singleChannelV =
-	  			cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
-	  singleChannelV->origin = img->origin;
+		HSV = cvCloneImage(img);
+		singleChannelH =
+					cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
+		singleChannelH->origin = img->origin;
+		IplImage* singleChannelV =
+					cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
+		singleChannelV->origin = img->origin;
 
-	  // set single channel up for Saturation / Variance
+		// set single channel up for Saturation / Variance
 
-	  singleChannelPlain =
-	  			cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
-	  singleChannelPlain->origin = img->origin;
-	  cvSet(singleChannelPlain, cvScalar(255));
+		singleChannelPlain =
+					cvCreateImage(cvSize(img->width,img->height), IPL_DEPTH_8U, 1);
+		singleChannelPlain->origin = img->origin;
+		cvSet(singleChannelPlain, cvScalar(255));
 
-	  // start main loop
+		// start main loop
 
-	  while (keepProcessing) {
+		while (keepProcessing) {
 
-		  // if capture object in use (i.e. video/camera)
-		  // get image from capture object
+			// if capture object in use (i.e. video/camera)
+			// get image from capture object
 
-		  if (capture) {
+			if (capture) {
 
-			  // cvQueryFrame is just a combination of cvGrabFrame
-			  // and cvRetrieveFrame in one call.
+				// cvQueryFrame is just a combination of cvGrabFrame
+				// and cvRetrieveFrame in one call.
 
-			  img = cvQueryFrame(capture);
+				img = cvQueryFrame(capture);
 
-			  // cvQueryFrame s just a combination of cvGrabFrame
-			  // and cvRetrieveFrame in one call.
+				// cvQueryFrame s just a combination of cvGrabFrame
+				// and cvRetrieveFrame in one call.
 
-			  if(!img){
+				if(!img){
 					if (argc == 2){
 						printf("End of video file reached\n");
 					} else {
 						printf("ERROR: cannot get next frame from camera\n");
 					}
 					exit(0);
-			  }
+				}
 
-		  }
+			}
 
-		  // extract first (or only input image channel)
+			// extract first (or only input image channel)
 
-		  if (img->nChannels > 1) {
-		  		cvSetImageCOI(img, 1); // select channel 1, 0 means all channels
-		  }
+			if (img->nChannels > 1) {
+					cvSetImageCOI(img, 1); // select channel 1, 0 means all channels
+			}
 
-		  // we will use this for the Hue and Variance channels
+			// we will use this for the Hue and Variance channels
 
-		  cvCopy(img, singleChannelH);
-		  cvCopy(img, singleChannelV);
-		  cvSetImageCOI(img, 0);
+			cvCopy(img, singleChannelH);
+			cvCopy(img, singleChannelV);
+			cvSetImageCOI(img, 0);
 
-		  // do colour normalisation (makes it look more impressive)
+			// do colour normalisation (makes it look more impressive)
 
-		  if (useNormalisation){
-		  	cvNormalize(singleChannelH, singleChannelH, 0, 255,
-			  												CV_MINMAX, NULL);
-				cvNormalize(singleChannelV, singleChannelV, 0, 255,
-			  												CV_MINMAX, NULL);
-		  }
+			if (useNormalisation){
+					cvNormalize(singleChannelH, singleChannelH, 0, 255, CV_MINMAX, NULL);
+					cvNormalize(singleChannelV, singleChannelV, 0, 255, CV_MINMAX, NULL);
+			}
 
-		  // do scaling to avoid Hue space wrap around (i.e. dark == bright!)
-		  // N.B. changing the scaling factor and addition will vary the colour
-		  // effect - OpenCV 8-bit Hue in range 0->120 => 0.5 * Hue + 90 maps
-		  // all values to (wrap-around) 180->60 range in Hue.
+			// do scaling to avoid Hue space wrap around (i.e. dark == bright!)
+			// N.B. changing the scaling factor and addition will vary the colour
+			// effect - OpenCV 8-bit Hue in range 0->120 => 0.5 * Hue + 90 maps
+			// all values to (wrap-around) 180->60 range in Hue.
 
-		  cvConvertScale(singleChannelH, singleChannelH, 0.5, 90);
+			cvConvertScale(singleChannelH, singleChannelH, 0.5, 90);
 
 			// put it all back together in RGB
 
-		  cvMerge(singleChannelH, singleChannelPlain,	singleChannelV, NULL, HSV);
-		  cvCvtColor(HSV, HSV, CV_HSV2BGR);
+			cvMerge(singleChannelH, singleChannelPlain,	singleChannelV, NULL, HSV);
+			cvCvtColor(HSV, HSV, CV_HSV2BGR);
 
-		  // display image in window
+			// display image in window
 
 			if (useConcatImage){
-				imshow(windowNameHSV, concatImages(cv::cvarrToMat(img), cv::cvarrToMat(HSV)));
+					imshow(windowNameHSV, concatImages(cv::cvarrToMat(img), cv::cvarrToMat(HSV)));
 			} else {
 				if (useFalseColour){
-			  	cvShowImage(windowNameHSV, HSV);
+						cvShowImage(windowNameHSV, HSV);
 				} else {
-			    cvShowImage(windowNameHSV, img);
-			  }
+						cvShowImage(windowNameHSV, img);
+				}
 			}
 
-		  // start event processing loop
+			// start event processing loop
 
-		  key = cvWaitKey(EVENT_LOOP_DELAY);
+			key = cvWaitKey(EVENT_LOOP_DELAY);
 
-		  // process any keyboard input
+			// process any keyboard input
 
-		  switch (tolower(key))
+			switch (tolower(key))
 			{
-				case  'x':
+				case	'x':
 
 					// if user presses "x" then exit
 
-	   				keepProcessing = false;
+		 				keepProcessing = false;
 					;
 					break;
-				case  'a':
+				case	'a':
 
 					// toggle automatic scaling
 
@@ -270,7 +268,7 @@ int main( int argc, char** argv )
 
 					;
 					break;
-			 	case  'b':
+			 	case	'b':
 
 					// toggle concatenated images
 
@@ -278,7 +276,7 @@ int main( int argc, char** argv )
 
 						;
 						break;
-				case  'c':
+				case	'c':
 
 					// toggle false colour
 
@@ -288,29 +286,30 @@ int main( int argc, char** argv )
 					break;
 			}
 
-	  }
+		}
 
-    // destroy window objects
+		// destroy window objects
 
-	  cvDestroyAllWindows();
+		cvDestroyAllWindows();
 
-    // destroy image object (if it does not originate from a capture object)
+		// destroy image object (if it does not originate from a capture object)
 
-    if (!capture){
-		  cvReleaseImage( &img );
-    }
-	  cvReleaseImage( &HSV );
-	  cvReleaseImage( &singleChannelH );
-	  cvReleaseImage( &singleChannelPlain );
+		if (!capture){
+				cvReleaseImage( &img );
+		}
 
-      // all OK : main returns 0
+		cvReleaseImage( &HSV );
+		cvReleaseImage( &singleChannelH );
+		cvReleaseImage( &singleChannelPlain );
 
-      return 0;
-    }
+			// all OK : main returns 0
 
-    // not OK : main returns -1
+			return 0;
+		}
 
-	print_help(argv);
-    return -1;
+		// not OK : main returns -1
+
+		print_help(argv);
+		return -1;
 }
 /******************************************************************************/
