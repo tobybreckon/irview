@@ -66,7 +66,7 @@ static void print_help(char **name){
 	printf("\t b - show both false colour and original (default: off)\n");
 	printf("\t c - toggle false colour (default: on)\n");
 	printf("\t e - exit (as per x or ESC)\n");
-	printf("\t f - toggle false colour (default: on)\n");
+	printf("\t f - toggle full screen (default: off)\n");
 	printf("\t x - exit\n\n");
 }
 

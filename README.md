@@ -17,7 +17,7 @@ Keyboard commands
          b - show both false colour and original (default: off)
          c - toggle false colour (default: on)
          e - exit (as per x)
-         f - toggle false colour (default: on)
+         f - toggle full screen (default: off)
          x - exit
 ```
 ---
