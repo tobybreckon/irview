@@ -65,6 +65,8 @@ static void print_help(char **name){
 	printf("\t a - automatic scaling (default: on)\n");
 	printf("\t b - show both false colour and original (default: off)\n");
 	printf("\t c - toggle false colour (default: on)\n");
+	printf("\t e - exit (as per x or ESC)\n");
+	printf("\t f - toggle false colour (default: on)\n");
 	printf("\t x - exit\n\n");
 }
 
@@ -117,7 +119,8 @@ int main( int argc, char** argv )
 
 	bool useFalseColour = true;		 // process flag - false colour
 	bool useNormalisation = true;	 // process flag - normalisation
-	bool useConcatImage = false; 		// process flag - show concatenated images
+	bool useConcatImage = false; 	 // process flag - show concatenated images
+	bool useFullScreen = false; 	 // process flag - run full screen
 
 	// if command line arguments are provided try to read image/video_name
 	// otherwise default to capture from attached H/W camera
@@ -134,8 +137,7 @@ int main( int argc, char** argv )
 
 		// create window object (use flag=0 to allow resize, 1 to auto fix size)
 
-		cvNamedWindow(windowNameHSV, 0);
-		cvResizeWindow(windowNameHSV, 640, 480);
+		cvNamedWindow(windowNameHSV, CV_WINDOW_NORMAL);
 
 		// if capture object in use (i.e. video/camera)
 		// get initial image from capture object
@@ -156,6 +158,8 @@ int main( int argc, char** argv )
 			}
 
 		}
+
+		cvResizeWindow(windowNameHSV, img->width, img->height);
 
 		// setup output image in HSV
 
@@ -254,6 +258,8 @@ int main( int argc, char** argv )
 			switch (tolower(key))
 			{
 				case	'x':
+				case	'e':
+				case	char(27): // ESC key
 
 					// if user presses "x" then exit
 
@@ -284,6 +290,18 @@ int main( int argc, char** argv )
 
 					;
 					break;
+				case	'f':
+
+						// toggle false colour
+
+						useFullScreen = (!useFullScreen);
+
+						// set or unset the CV_WINDOW_FULLSCREEN flag via logical AND with toggle boolean
+
+						cvSetWindowProperty(windowNameHSV, CV_WND_PROP_FULLSCREEN, (CV_WINDOW_FULLSCREEN & useFullScreen));
+
+						;
+						break;
 			}
 
 		}
