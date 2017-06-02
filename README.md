@@ -28,7 +28,7 @@ Work carried out as part of the UK MoD Grand Challenge 2008 (autonomous systems 
 
 --
 
-[![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)] (http://www.youtube.com/watch?v=c9nF-k0u0Qk)
+[![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)](http://www.youtube.com/watch?v=c9nF-k0u0Qk)
 
 --
 
