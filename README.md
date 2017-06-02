@@ -26,6 +26,11 @@ Originally developed as a visualization and test tool to support the research in
 
 Work carried out as part of the UK MoD Grand Challenge 2008 (autonomous systems for wide area search and surveillance).
 
+Used for the false colour visualization examples in:
+
+ [Dictionary of Computer Vision and Image Processing](http://dx.doi.org/10.1002/9781119286462http://dx.doi.org/10.1002/9781119286462) (R.B. Fisher, T.P. Breckon, K. Dawson-Howe, A. Fitzgibbon, C. Robertson, E. Trucco, C.K.I. Williams), Wiley, 2014.
+ [[Google Books](http://books.google.co.uk/books?id=TaEQAgAAQBAJ&lpg=PP1&dq=isbn%3A1118706811&pg=PP1v=onepage&q&f=false)] [[doi](http://dx.doi.org/10.1002/9781119286462http://dx.doi.org/10.1002/9781119286462)]
+
 ---
 
 Click for youtube video example (of thermal ducks):
