@@ -230,10 +230,9 @@ int main( int argc, char** argv )
 
 		  cvConvertScale(singleChannelH, singleChannelH, 0.5, 90);
 
-      // put it all back together in RGB
+			// put it all back together in RGB
 
-		  cvMerge(singleChannelH, singleChannelPlain,
-		  										singleChannelV, NULL, HSV);
+		  cvMerge(singleChannelH, singleChannelPlain,	singleChannelV, NULL, HSV);
 		  cvCvtColor(HSV, HSV, CV_HSV2BGR);
 
 		  // display image in window
@@ -273,9 +272,9 @@ int main( int argc, char** argv )
 					break;
 			 	case  'b':
 
-						// toggle concatenated images
+					// toggle concatenated images
 
-						useConcatImage = (!useConcatImage);
+					useConcatImage = (!useConcatImage);
 
 						;
 						break;
