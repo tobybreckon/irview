@@ -105,20 +105,20 @@ Mat concatImages(Mat img1, Mat img2)
 int main( int argc, char** argv )
 {
 
-	IplImage* img = NULL;			// image object
-	CvCapture* capture = NULL; // capture object
+	IplImage* img = NULL;				// image object
+	CvCapture* capture = NULL; 	// capture object
 
 	const char* windowNameHSV = PROG_ID_STRING; // window name
 
- 	IplImage* HSV = NULL;					// HSV image
- 	IplImage* singleChannelH = NULL;		// Hue plain (from input image)
+ 	IplImage* HSV = NULL;									// HSV image
+ 	IplImage* singleChannelH = NULL;			// Hue plain (from input image)
  	IplImage* singleChannelPlain = NULL; 	// constant plane for S & V
 
 
 	bool keepProcessing = true;		// loop control flag
-	char key = '\0';				// user input
-	int	EVENT_LOOP_DELAY = 40;		 // 40ms equates to 1000ms/25fps =
-									// 40ms per frame
+	char key = '\0';							// user input
+	int	EVENT_LOOP_DELAY = 40;		// 40ms equates to 1000ms/25fps =
+																// 40ms per frame
 
 	bool useFalseColour = true;		 // process flag - false colour
 	bool useNormalisation = true;	 // process flag - normalisation
