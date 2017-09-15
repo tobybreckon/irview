@@ -10,9 +10,11 @@
 
 /******************************************************************************/
 
-#define BUILD_FOR_OPENCV_3 1
+#include "cv.h"         // open cv general include file
 
-#if (BUILD_FOR_OPENCV_3)
+#if (CV_MAJOR_VERSION > 2)
+
+// includes for OpenCV 3.x and onward
 
 #include "opencv2/videoio.hpp"
 #include "opencv2/highgui.hpp"
@@ -27,7 +29,8 @@ using namespace std;
 
 #else
 
-#include "cv.h"			 // open cv general include file
+// includes for older OpenCV 2.4.x
+
 #include "highgui.h"	// open cv GUI include file
 
 #include <stdio.h>
