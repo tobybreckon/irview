@@ -10,7 +10,7 @@
 
 /******************************************************************************/
 
-#include "cv.h"         // open cv general include file
+#include "cv.h"	// open cv general include file
 
 #if (CV_MAJOR_VERSION > 2)
 
@@ -21,17 +21,17 @@
 #include "opencv2/imgproc.hpp"
 
 #include <iostream>		// standard C++ I/O
-#include <string>		// standard C++ I/O
-#include <algorithm>		// includes max()
+#include <string>			// standard C++ I/O
+#include <algorithm>	// includes max()
 
-using namespace cv; // OpenCV API is in the C++ "cv" namespace
+using namespace cv; 	// OpenCV API is in the C++ "cv" namespace
 using namespace std;
 
 #else
 
 // includes for older OpenCV 2.4.x
 
-#include "highgui.h"	// open cv GUI include file
+#include "highgui.h"		// open cv GUI include file
 
 #include <stdio.h>
 #include <ctype.h>
