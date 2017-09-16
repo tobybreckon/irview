@@ -1,5 +1,13 @@
+# irview cmake configuration file
+
+# Author : Toby Breckon, toby.breckon@durham.ac.uk
+
+# Copyright (c) 2008 School of Engineering, Cranfield University
+# Copyright (c) 2017 School of Engineering and Computing Sciences, Durham University
+# License : GPL - http://www.gnu.org/licenses/gpl.html
+
 cmake_minimum_required (VERSION 2.6)
-set( CMAKE_CXX_FLAGS "-O3 -Wall ${CMAKE_CXX_FLAGS}" )
+set( CMAKE_CXX_FLAGS "-O3 -Wall -march=native ${CMAKE_CXX_FLAGS}" )
 
 # linux specific stuff
 
