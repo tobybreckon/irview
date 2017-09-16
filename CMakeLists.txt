@@ -22,7 +22,7 @@ ENDIF ( UNIX )
 IF ( WIN32 )
    set( CMAKE_PREFIX_PATH "C:/OpenCV/build" )
    set( OpenCV_DIR "C:/OpenCV/build" )
-   MESSAGE( "WINDOWS CONFIG" )
+   MESSAGE( "WINDOWS CONFIG - assuming OpenCV in C:/OpenCV/build" )
 ENDIF ( WIN32 )
 
 find_package( OpenCV REQUIRED )
