@@ -66,8 +66,6 @@ make
 ```
 ---
 
----
-
 If you find any bugs report them to me (or better still submit a pull request, please) - toby.breckon@durham.ac.uk
 
 _"may the source be with you"_ - anon.
