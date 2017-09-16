@@ -4,6 +4,8 @@ Requires [OpenCV 3.x](http://www.opencv.org).
 
 ---
 
+### Usage:
+
 ```
 IrView v0.2- (c) Toby Breckon, 2008-2017+
          with OpenCV version 3.1.0 (3.1.0)
@@ -21,6 +23,8 @@ Keyboard commands
          x - exit
 ```
 ---
+
+### Background:
 
 _"In certain instances, it can be better to display intensity images using a false-colour map.
 One of the main motives behind the use of false-colour display rests on the fact that the
@@ -43,9 +47,24 @@ Used for the false colour visualization examples in:
 
 ---
 
+### Example:
+
 Click for YouTube video example (of thermal ducks):
 
 [![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)](http://www.youtube.com/watch?v=c9nF-k0u0Qk)
+
+---
+
+### How to build and run:
+
+```
+git clone https://github.com/tobybreckon/irview.git
+cd irview
+cmake .
+make
+./irview
+```
+---
 
 ---
 
