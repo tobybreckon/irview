@@ -14,16 +14,16 @@ set( CMAKE_CXX_FLAGS "-O3 -Wall -march=native ${CMAKE_CXX_FLAGS}" )
 IF ( UNIX )
    set( CMAKE_PREFIX_PATH "/opt/opencv" )
    set_property(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
-   MESSAGE( "USING - LINUX/UNIX SPECIFIC CONFIG" )
+   MESSAGE( "LINUX/UNIX SPECIFIC CONFIG" )
 ENDIF ( UNIX )
 
-# windows (inc. 64-bit specific stuff)
+# windows (also for 64-bit as WIN32 defined on MS WIN 64-bit also - ?!)
 
-# IF ( WIN32 )
-#   set( CMAKE_PREFIX_PATH "C:/OpenCV2.4/build" )
-#   set( OpenCV_DIR "C:/OpenCV2.4/build" )
-#   MESSAGE( "WINDOWS CONFIG" )
-# ENDIF ( WIN32 )
+IF ( WIN32 )
+   set( CMAKE_PREFIX_PATH "C:/OpenCV/build" )
+   set( OpenCV_DIR "C:/OpenCV/build" )
+   MESSAGE( "WINDOWS CONFIG" )
+ENDIF ( WIN32 )
 
 find_package( OpenCV REQUIRED )
 
