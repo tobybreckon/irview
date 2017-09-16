@@ -14,7 +14,7 @@ set( CMAKE_CXX_FLAGS "-O3 -Wall -march=native ${CMAKE_CXX_FLAGS}" )
 IF ( UNIX )
    set( CMAKE_PREFIX_PATH "/opt/opencv" )
    set_property(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
-   MESSAGE( "LINUX CONFIG" )
+   MESSAGE( "USING - LINUX/UNIX SPECIFIC CONFIG" )
 ENDIF ( UNIX )
 
 # windows (inc. 64-bit specific stuff)
