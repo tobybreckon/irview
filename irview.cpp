@@ -24,8 +24,6 @@
 	#include <string>			// standard C++ I/O
 	#include <algorithm>	// includes max()
 
-	using namespace cv; 	// OpenCV API is in the C++ "cv" namespace
-	using namespace std;
 
 #else
 
@@ -37,6 +35,9 @@
 	#include <ctype.h>
 
 #endif
+
+using namespace cv; 	// OpenCV API is in the C++ "cv" namespace
+using namespace std;
 
 /******************************************************************************/
 // setup the camera index properly based on OS platform
