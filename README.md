@@ -35,14 +35,14 @@ human observer."_  [[Solomon / Breckon, 2010](http://www.fundipbook.com)]
 
 Originally developed as a visualization and test tool to support the research in:
 
-[Multi-Modal Target Detection for Autonomous Wide Area Search and Surveillance](http://community.dur.ac.uk/toby.breckon/publications/papers/breckon13autonomous.pdf)
+- [Multi-Modal Target Detection for Autonomous Wide Area Search and Surveillance](http://community.dur.ac.uk/toby.breckon/publications/papers/breckon13autonomous.pdf)
 (T.P. Breckon, A. Gaszczak, J. Han, M.L. Eichner, S.E. Barnes), In Proc. SPIE Emerging Technologies in Security and Defence: Unmanned Sensor Systems, SPIE, Volume 8899, No. 01, pp. 1-19, 2013. [[pdf](http://community.dur.ac.uk/toby.breckon/publications/papers/breckon13autonomous.pdf)] [[doi](http://dx.doi.org/10.1117/12.2028340)]
 
 Work carried out as part of the _UK MoD Grand Challenge 2008_ (Stellar Team - autonomous systems for wide area search and surveillance).
 
 Used for the false colour visualization examples in:
 
- [Dictionary of Computer Vision and Image Processing](http://dx.doi.org/10.1002/9781119286462) (R.B. Fisher, T.P. Breckon, K. Dawson-Howe, A. Fitzgibbon, C. Robertson, E. Trucco, C.K.I. Williams), Wiley, 2014.
+ - [Dictionary of Computer Vision and Image Processing](http://dx.doi.org/10.1002/9781119286462) (R.B. Fisher, T.P. Breckon, K. Dawson-Howe, A. Fitzgibbon, C. Robertson, E. Trucco, C.K.I. Williams), Wiley, 2014.
  [[Google Books](http://books.google.co.uk/books?id=TaEQAgAAQBAJ&lpg=PP1&dq=isbn%3A1118706811&pg=PP1v=onepage&q&f=false)] [[doi](http://dx.doi.org/10.1002/9781119286462)]
 
 ---
