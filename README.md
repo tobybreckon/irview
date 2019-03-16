@@ -1,6 +1,7 @@
 # Infrared (Thermal) Video Viewer - False Colour Mapping
 
-Requires [OpenCV 3.x](http://www.opencv.org).
+Requires [OpenCV 4.x](http://www.opencv.org).
+(for OpenCV 3.x version - see [OpenCV 3.x branch](https://github.com/tobybreckon/irview/tree/opencv-3))
 
 ---
 
@@ -8,7 +9,7 @@ Requires [OpenCV 3.x](http://www.opencv.org).
 
 ```
 IrView v0.2- (c) Toby Breckon, 2008-2017+
-         with OpenCV version 3.1.0 (3.1.0)
+         with OpenCV version 4.0.1-dev (4.0.1)
 GPL - http://www.gnu.org/licenses/gpl.html
 
 Usage :./irview [image/video file]
