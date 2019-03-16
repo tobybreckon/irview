@@ -8,7 +8,7 @@ Requires [OpenCV 4.x](http://www.opencv.org).
 ### Usage:
 
 ```
-IrView v0.2- (c) Toby Breckon, 2008-2017+
+IrView v0.2- (c) Toby Breckon, 2008-2019+
          with OpenCV version 4.0.1-dev (4.0.1)
 GPL - http://www.gnu.org/licenses/gpl.html
 
