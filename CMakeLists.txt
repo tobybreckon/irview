@@ -12,7 +12,7 @@ cmake_minimum_required (VERSION 2.6)
 
 IF ( UNIX )
    set( CMAKE_CXX_FLAGS "-O3 -Wall -march=native ${CMAKE_CXX_FLAGS}" )
-   set( CMAKE_PREFIX_PATH "/opt/opencv" )
+   set( CMAKE_PREFIX_PATH "/opt/opencv:/opt/opencv-4.0.x/lib64/cmake/opencv4/" )
    set_property(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
    MESSAGE( "LINUX/UNIX SPECIFIC CONFIG" )
 ENDIF ( UNIX )
@@ -25,8 +25,9 @@ IF ( WIN32 )
    MESSAGE( "WINDOWS CONFIG - assuming OpenCV in C:/OpenCV/build" )
 ENDIF ( WIN32 )
 
+project(irview)
+
 find_package( OpenCV REQUIRED )
 
-project(irview)
 add_executable(irview irview.cpp)
 target_link_libraries( irview ${OpenCV_LIBS} )
