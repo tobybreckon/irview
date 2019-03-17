@@ -117,9 +117,6 @@ int main( int argc, char** argv )
 	const char* windowNameHSV = PROG_ID_STRING; // window name
 
  	Mat HSV;									// HSV image
- 	Mat singleChannelH;				// Hue plain (from input image)
- 	Mat singleChannelPlain; 	// constant plane for S & V
-
 
 	bool keepProcessing = true;		// loop control flag
 	unsigned char key;						// user input
