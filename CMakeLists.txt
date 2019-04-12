@@ -35,6 +35,7 @@ find_package( OpenCV 3 REQUIRED )
 # be set, you can find the full list with descriptions
 # in the OpenCVConfig.cmake file.
 # Print some message showing some of them
+
 message(STATUS "OpenCV library status:")
 
 message(STATUS "    config: ${OpenCV_DIR}")
@@ -43,11 +44,10 @@ message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
 set (OpenCV_INCLUDE_DIRS "/opt/opencv/include")
+message(STATUS "    include path (reset): ${OpenCV_INCLUDE_DIRS}")
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIR})
-
-message(STATUS "    include path (reset): ${OpenCV_INCLUDE_DIRS}")
 
 add_executable(irview irview.cpp)
 target_link_libraries( irview ${OpenCV_LIBS} )
