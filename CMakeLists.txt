@@ -29,7 +29,10 @@ ENDIF ( WIN32 )
 
 project(irview)
 
-find_package( OpenCV 3 REQUIRED )
+find_package( OpenCV REQUIRED )
+if (NOT (OpenCV_VERSION VERSION_GREATER 3.0))
+         message(FATAL_ERROR "${PROJECT_NAME} requires OpenCV 3.0 or greater.")
+endif ()
 
 # If the package has been found, several variables will
 # be set, you can find the full list with descriptions
@@ -40,11 +43,11 @@ message(STATUS "OpenCV library status:")
 
 message(STATUS "    config: ${OpenCV_DIR}")
 message(STATUS "    version: ${OpenCV_VERSION}")
-message(STATUS "    libraries: ${OpenCV_LIBS}")
+# message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
-set (OpenCV_INCLUDE_DIRS "/opt/opencv/include")
-message(STATUS "    include path (reset): ${OpenCV_INCLUDE_DIRS}")
+# set (OpenCV_INCLUDE_DIRS "/opt/opencv/include")
+# message(STATUS "    include path (reset): ${OpenCV_INCLUDE_DIRS}")
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIR})
