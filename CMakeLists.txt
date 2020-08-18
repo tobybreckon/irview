@@ -14,7 +14,7 @@ cmake_minimum_required (VERSION 2.6)
 
 IF ( UNIX )
    set( CMAKE_CXX_FLAGS "-O3 -Wall -march=native ${CMAKE_CXX_FLAGS}" )
-   set( CMAKE_PREFIX_PATH "/opt/opencv:/opt/opencv-4.0.x/lib64/cmake/opencv4/" )
+   set( CMAKE_PREFIX_PATH "/opt/opencv/lib64/cmake/opencv4/" )
    set_property(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
    MESSAGE( "LINUX/UNIX SPECIFIC CONFIG" )
 ENDIF ( UNIX )
