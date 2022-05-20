@@ -6,7 +6,7 @@
 
 // Copyright (c) 2008 School of Engineering, Cranfield University
 // Copyright (c) 2017 School of Engineering and Computing Sciences, Durham University
-// Copyright (c) 2019 Dept. Computer Science, Durham University
+// Copyright (c) 2019-2022 Dept. Computer Science, Durham University
 
 // License : GPL - http://www.gnu.org/licenses/gpl.html
 
@@ -40,7 +40,7 @@ using namespace std;
 
 /******************************************************************************/
 
-#define PROG_ID_STRING "IrView v0.3 - (c) Toby Breckon, 2008-2019+"
+#define PROG_ID_STRING "IrView v0.3 - (c) Toby Breckon, 2008-2022+"
 #define LICENSE_STRING "GPL - http://www.gnu.org/licenses/gpl.html"
 
 static void print_help(char **name){
