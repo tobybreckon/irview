@@ -37,6 +37,7 @@ using namespace std;
 	#define CAMERA_INDEX -1
 	#define CAMERA_API_TO_USE CAP_ANY
 #endif
+
 /******************************************************************************/
 
 #define PROG_ID_STRING "IrView v0.3 - (c) Toby Breckon, 2008-2019+"
