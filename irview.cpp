@@ -32,8 +32,10 @@ using namespace std;
 
 #ifdef linux
 	#define CAMERA_INDEX 0
+	#define CAMERA_API_TO_USE CAP_V4L2
 #else
 	#define CAMERA_INDEX -1
+	#define CAMERA_API_TO_USE CAP_ANY
 #endif
 /******************************************************************************/
 
@@ -134,7 +136,7 @@ int main( int argc, char** argv )
 	if(
 		( argc == 2 && (!(img = imread( argv[1], IMREAD_COLOR)).empty()))||
 		( argc == 2 && (capture.open(argv[1]) == true )) ||
-		( argc != 2 && (capture.open(CAMERA_INDEX) == true))
+		( argc != 2 && (capture.open(CAMERA_INDEX, CAMERA_API_TO_USE) == true))
 	)
 	{
 		// print help
