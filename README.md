@@ -8,18 +8,18 @@ Requires [OpenCV 4.x](http://www.opencv.org).
 ### Usage:
 
 ```
-IrView v0.2- (c) Toby Breckon, 2008-2019+
-         with OpenCV version 4.0.1-dev (4.0.1)
+IrView v0.3 - (c) Toby Breckon, 2008-2022+
+         with OpenCV version 4.5.5-dev (4.5.5)
 GPL - http://www.gnu.org/licenses/gpl.html
 
 Usage :./irview [image/video file]
-Camera interface: run with no file argument for direct camera use
+Camera interface: run with no file argument for direct camera use (default: camera 0)
 
 Keyboard commands
          a - automatic scaling (default: on)
          b - show both false colour and original (default: off)
          c - toggle false colour (default: on)
-         e - exit (as per x)
+         e - exit (as per x or ESC)
          f - toggle full screen (default: off)
          x - exit
 ```

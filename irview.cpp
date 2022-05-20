@@ -52,7 +52,7 @@ static void print_help(char **name){
 
 
 	printf("Usage :%s [image/video file]\n", name[0]);
-	printf("Camera interface: run with no file agrument for direct camera use\n");
+	printf("Camera interface: run with no file argument for direct camera use (default: camera 0)\n");
 	printf("\nKeyboard commands\n");
 	printf("\t a - automatic scaling (default: on)\n");
 	printf("\t b - show both false colour and original (default: off)\n");
