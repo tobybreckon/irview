@@ -258,6 +258,7 @@ int main( int argc, char** argv )
 					;
 					break;
 				case	'a':
+				case	'7':
 
 					// toggle automatic scaling
 
@@ -266,6 +267,7 @@ int main( int argc, char** argv )
 					;
 					break;
 			 	case	'b':
+				case	'8':
 
 					// toggle concatenated images
 
@@ -274,6 +276,7 @@ int main( int argc, char** argv )
 						;
 						break;
 				case	'c':
+				case	'9':
 
 					// toggle false colour
 
@@ -283,7 +286,7 @@ int main( int argc, char** argv )
 					break;
 				case	'f':
 
-						// toggle false colour
+						// toggle full screen
 
 						useFullScreen = (!useFullScreen);
 
