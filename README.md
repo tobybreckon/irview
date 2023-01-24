@@ -52,7 +52,8 @@ Used for the false colour visualization examples in:
 
 Click for YouTube video example (of thermal ducks):
 
-[![Example Video](http://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)](http://www.youtube.com/watch?v=c9nF-k0u0Qk)
+
+[![Example Video](https://img.youtube.com/vi/c9nF-k0u0Qk/0.jpg)](https://www.youtube.com/watch?v=c9nF-k0u0Qk)
 
 ---
 
